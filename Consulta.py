@@ -47,11 +47,11 @@ boton2.pack(pady=10)
 resultado = tk.Label(tabla, text="", bg="gray", fg="black")
 resultado.pack()
 filas = recupera()
-encabezados = ('cantidad', 'numero de serie', 'nombre', 'descripcion')
+encabezados = ('CANTIDAD', 'NUMERO DE SERIE', 'NOMBRE', 'DESCRIPCION')
 tree = ttk.Treeview(tabla, columns=encabezados, show="headings")
 
 for encabezado in encabezados:
-    tree.heading(encabezado, text=encabezado.capitalize())
+    tree.heading(encabezado, text=encabezado)
     tree.column(encabezado, width=150)
 
 mostrar(filas)
